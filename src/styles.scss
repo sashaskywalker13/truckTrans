@@ -1,0 +1,164 @@
+@import '/assets/css/reset.css';
+@import '/assets/css/variables.scss';
+@import '/assets/css/fonts.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '../node_modules/slick-carousel/slick/slick.css';
+
+@import '/components/header/header';
+@import '/components/burger-menu/burger-menu';
+@import '/components/advantages/advantages';
+@import '/components/achieve/achieve';
+@import '/components/button/button';
+@import '/components/form-send/form-send';
+@import '/components/footer/footer';
+
+.main-block {
+    display: grid;
+    background: url(/assets/img/bg-main1-com.jpg);
+    background-size: cover;
+    grid-template-columns:  repeat(10, 1fr);
+    grid-template-rows: auto;
+	grid-template-areas:
+		"b h h h h h h h h h "
+        "b . . . . . . m m . ";
+        &__header {
+            grid-area: h;
+        }
+        &__burger-menu {
+            grid-area: b;
+        }
+        &__title {
+            grid-area: m;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: $Light;
+            &_text {
+                @include NunitoBold;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            &_desc {
+                @include NunitoReg;
+                text-align: center;
+                margin: 30px 0;
+            }
+
+        }
+}
+.advantages-block {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    background: $Light;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 140px;
+    &__header {
+        @include NunitoBold;
+    }
+    &__desc {
+        @include NunitoReg;
+    }
+    &__main {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+    }
+}
+.achieve-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background: $Orange;
+}
+.advantages-color-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 60vh;
+    &__1 {
+       padding: 30% 30px;
+       background: #fff; 
+    }
+    &__2 {
+        padding: 30% 30px;
+        background: $Light; 
+    }
+    &__3 {
+        padding: 30% 30px;
+        background: $DarkBlue;
+        color: Grey;
+    }
+    &__4 {
+        padding: 30% 30px;
+        background: $Orange;
+        color: $Light;
+        i {
+            color: $Light;
+        }
+    }
+}
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    &__address {
+        display: flex;
+        flex-direction: column;
+        color: grey;
+        @include NunitoReg;
+        background: $DarkBlue;
+        padding: 50px;
+        text-align: left;
+        p {
+            margin: 10px 0;
+        }
+        span {
+            color: $Orange;
+            font-size: 24px;
+        }
+        a {
+            color: Grey;
+            &:hover {
+                color: $Orange;
+            }
+        }
+    }
+}
+.instagram {
+    display: flex;
+    &__photo {
+        display: flex;
+        width: 50%;
+    }
+    &__photo_block {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        img {
+            display: inline-block;
+            width: 50%;
+            height: 50%;
+            vertical-align: bottom;
+        }
+    }
+    &__folowUs {
+        display: flex;
+        width: 50%;
+        background: $Light;
+        flex-direction: column;
+        padding: 40px;
+        color: $DarkBlue;
+        text-align: right;
+        &_title {
+        @include NunitoBold;            
+        }
+        &_desc {
+        @include NunitoReg;
+        }
+
+
+    }
+}

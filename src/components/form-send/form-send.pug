@@ -1,0 +1,26 @@
+include /components/button/button
+include /components/input/input
+
+mixin form-send()
+  .popup-background
+  form.form-send(action="submit")
+    button(type="button").form-send__button_close X
+    .form-send__title
+      h2 Заказать расчёт
+    .form-send__input
+      h3 откуда
+      +input(type="text" placeholder='откуда')
+    .form-send__input
+      h3 куда
+      +input(type="text" placeholder='куда')
+    .form-send__input
+      h3 тип груза
+      +input(type="text" placeholder='тип груза')
+    .form-send__input
+      h3 email
+      +input(type="text" placeholder='email')
+    .form-send__input
+      h3 телефон
+      +input(type="phone" placeholder='телефон')
+    .form-send__button
+      +button('заказать расчет', 'orange', false)

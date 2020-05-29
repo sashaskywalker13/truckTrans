@@ -1,0 +1,31 @@
+
+// colors
+$DarkBlue: #13334c;
+$Blue: #005792;
+$Light: #f6f6e9;
+$Orange: #fd5f00;
+// fonts
+@mixin Nunito {
+    font: {
+      family: Nunito;
+      size: 14px;
+      weight: 400;
+    }
+  }
+@mixin NunitoReg {
+    font: {
+      family: Nunito;
+      size: 18px;
+      weight: 700;
+    }
+  }
+@mixin NunitoBold {
+    font: {
+      family: Nunito;
+      size: 24px;
+      weight: 900;
+    }
+  }
+  span {
+    font-weight: 900;
+  }

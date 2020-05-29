@@ -1,0 +1,19 @@
+.advantages {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    &__icon {
+        font-size: 35px;
+        color: $Orange;
+    }
+    &__title {
+        @include NunitoReg;
+        margin: 20px 0;
+    }
+    &__desc {
+        @include Nunito;
+    }
+}

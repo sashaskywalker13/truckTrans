@@ -1,0 +1,33 @@
+.button-main {
+    width: 250px;
+    height: 50px;
+    color: $Light;
+    font-family: Nunito;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    background: $Blue;
+    box-shadow: 0 0 40px rgba(17, 3, 56, 0.6);
+    &:hover {
+        opacity: 0.5;
+    }
+    &-blue {
+        @extend .button-main;
+        background: $Blue; 
+    }
+    &-orange {
+        @extend .button-main;
+        background: $Orange;
+    }
+    &-light {
+        @extend .button-main;
+        background: $Light;
+        border: 2px solid $Blue;
+        color: $Blue;
+    }
+    &-header {
+        @extend .button-main-light;
+        height: 100%;
+        width: 150px;   
+    }
+}

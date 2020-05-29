@@ -1,0 +1,3 @@
+mixin button(text='', theme='', popup=true)
+    - let className = theme && popup ? `button-main-${theme} buttonPopup` : `button-main-${theme}`;
+    button(class = className)= text

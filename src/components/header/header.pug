@@ -1,0 +1,13 @@
+include /components/button/button
+
+mixin header()
+  header.header
+    nav.header__navigation
+      ul.header__navigation_list
+        li.header__navigation_list-item
+          a(href="#") Домой
+        li.header__navigation_list-item
+          a(href="#") О нас
+        li.header__navigation_list-item
+          a(href="#") Контакты
+    +button('отправить заявку','header', true)
